@@ -1,90 +1,57 @@
+<head>
+	<style>body{
+  background: #000;
+  color: #fff;
+  padding: 0;
+  margin: 0
+}
+h1{
+  font-size: 48px;
+  padding: 26px 96px
+}
+p{
+  padding: 0 96px;
+  font-size: 24px
+}
+#adj{
+  color: red;
+}
+
+button{
+  padding: 12px 24px;
+  font-size: 20px;
+  margin: 12px 96px;
+  color: #fff;
+  background: #000;
+  border: 1px solid white;
+  border-radius: 24px;
+}
+
+button:hover{
+  color: #000;
+  background: #fff;
+}
+img{
+ padding: 12px 96px;
+ height: 300px; 
+}
+		</style>
+</head>
 <body>
-<canvas id ='oldSkool'></canvas>
+<h1>Sweety</h1>
+<p><span> Ami ki <span id="adj">valo</span></p>
+ <img src='https://media.licdn.com/dms/image/D5603AQGaNyxbRE4iqA/profile-displayphoto-shrink_800_800/0/1684762792057?e=2147483647&v=beta&t=WVb-IvPMoY55wky-1x9bfK9Tt97g1TVDOURGhmgd0SY'/>
+<br>
+  <button onclick="changeIt();">change</button>
 <script>
-  var db = document.body;
-  var c = document.getElementById('oldSkool');
-  var $ = c.getContext('2d');
-  c.width = window.innerWidth;
-  c.height = window.innerHeight;
-  var resume;
-  function relay(){
-  window.requestAnimationFrame(relay);
-  resume();
+	var flag = 0
+
+function changeIt(){
+ if(flag%2==0){
+document.getElementById("adj").innerHTML = "valo !!";
+ } else{document.getElementById("adj").innerHTML = "soitan"
+}
+  flag++;
 }
 </script>
-  <!--Script to Relay!-->
-<script>
-  //BEGIN SCRIPT RELAY TO CODEPEN.IO... 
-  
-  _s = db.querySelectorAll("script")[1].innerHTML.split("\n");
-  x = 0; 
-  y = 1; 
-  c.width = w = window.innerWidth;
-  c.height = h = _s.length*20;
-  db.style.margin = 0;
-  db.style.background = "hsla(0,0%,0%,1)";
-  db.style.overflow = "hidden";
-  $.textBaseline = "top";
-  $.font = "1.1em monospace";
-  
-//PAUSE RELAY: DRAW INSPECTOR GADGET...
-/*
-                ___
-         _..--"\  `|`""--.._
-      .-'       \  |        `'-.
-     /           \_|___...----'`\
-    |__,,..--""``(_)--..__      |
-    '\     _.--'`.I._     ''--..'
-      `''"`,#TMR/_|_\###,---'`
-        ,#'  _.:`___`:-._ '#,
-       #'  ,~'-;(oIo);-'~, '#
-       #   `~-(  |    )=~`  #
-       #       | |_  |      #
-       #       ; ._. ;      #
-       #  _..-;|\ - /|;-._  #
-       #-'   /_ \\_// _\  '-#
-     /`#    ; /__\-'__\;    #`\
-    ;  #\.--|  |O  O   |'-./#  ;
-    |__#/   \ _;O__O___/   \#__|
-     | #\    [I_[_]__I]    /# |
-     \_(#   /  |O  O   \   #)_/
-           /   |        \
-          /    |         \
-         /    /\          \
-        /     | `\         ;
-       ;      \   '.       |
-        \-._.__\     \_..-'/
-         '.\  \-.._.-/  /'`
-            \_.\    /._/
-             \_.;  ;._/
-           .-'-./  \.-'-.
-          (___.'    '.___)
-*/
-//RESUME SCRIPT RELAY...
-  
-resume = function(){
-    $.globalCompositeOperation = "source-over";
-    $.shadowBlur = 0; $.fillStyle = "hsla(0,0%,0%,0.4)";
-    $.fillRect(0,0,w,h);
-    $.shadowColor = "hsla(120,100%,50%,0.5)";
-    $.shadowBlur = 9; $.fillStyle = "hsla(120,100%,20%,1)";
-    $.globalCompositeOperation = "lighter";
-  _s.forEach(function(t, i) {
-      if (i <= y) {
-        if (i == y) { t = t.substr(0, x); }
-        $.fillText(t, 100, 100+i*16);		}
-	});
-                 
-	$.fillStyle = "hsla(120,100%,50%,1)";
-	$.fillRect(100+$.measureText(_s[y].substr(0, x)).width, 102+y*16, 10, 14);
-	x++;
-		if (x >= _s[y].length) { y++; x = 0;}
-			if (y*16 > innerHeight-200) { $.translate(0, -0.5);}
-				if (y >= _s.length-1) { window.clearInterval();}}
-  
-relay();
-  
-//END SCRIPT RELAY _
-</script>
-
 </body>
