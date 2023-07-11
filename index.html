@@ -1,4 +1,4 @@
-<head>
+<!--<head>
 	<style>body{
   background: #000;
   color: #fff;
@@ -54,4 +54,140 @@ document.getElementById("adj").innerHTML = "valo !!";
   flag++;
 }
 </script>
-</body>
+</body> -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sweety's Portfolio</title>
+    <style>
+	    body {
+  background-color: #f4f4f4;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #5a67d8;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 36px;
+  margin: 0;
+}
+
+.section {
+  background-color: white;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+button.nav-button {
+  background-color: #5a67d8;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button.nav-button:hover {
+  background-color: #304ba3;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+}
+
+    </style>
+  </head>
+  <body>
+	 
+    <header>
+      <h1>Sweety Mondal</h1>
+      <p>Welcome to my website!</p>
+    </header>
+
+    <section id="education" class="section">
+      <h2>Education</h2>
+      <ul>
+        <li>Savitribai Phule Pune University</li>
+        <li>M.Sc. Industrial Mathematics with Computer Applications</li>
+        <li>Ongoing Degree (Completion 2024)</li>
+      </ul>
+      <ul>
+        <li>St. Xavier's College Kolkata</li>
+        <li>B.Sc. Mathematics Honors</li>
+      </ul>
+      <ul>
+        <li>St. Augustine's Day School Shyamnagar (ICSE)</li>
+      </ul>
+    </section>
+
+    <section id="language" class="section">
+      <h2>Language</h2>
+      <ul>
+        <li>English</li>
+        <li>Bengali</li>
+        <li>Hindi</li>
+      </ul>
+    </section>
+
+    <section id="skills" class="section">
+      <h2>Skills</h2>
+      <ul>
+        <li>Programming</li>
+        <li>Problem Solving</li>
+        <li>Data Structures</li>
+        <li>SQL</li>
+        <li>Python</li>
+        <li>Machine Learning</li>
+      </ul>
+    </section>
+
+    <section id="tools" class="section">
+      <h2>Tools</h2>
+      <ul>
+        <li>Jupyter Notebook</li>
+        <li>PostgreSQL</li>
+      </ul>
+    </section>
+
+    <section id="contact" class="section">
+      <h2>Contact Me</h2>
+      <p>Ph. 9073101906</p>
+      <p>Mail: sweetymondal89@gmail.com</p>
+    </section>
+
+    <footer>
+      <button class="nav-button" data-target="education">Education</button>
+      <button class="nav-button" data-target="language">Language</button>
+      <button class="nav-button" data-target="skills">Skills</button>
+      <button class="nav-button" data-target="tools">Tools</button>
+      <button class="nav-button" data-target="contact">Contact</button>
+    </footer>
+<script>
+	const buttons = document.querySelectorAll('.nav-button');
+
+buttons.forEach((button) => {
+  button.addEventListener('click', () => {
+    const target = button.dataset.target;
+    const section = document.getElementById(target);
+    section.scrollIntoView({ behavior: 'smooth' });
+  });
+});
+
+</script>
+  </body>
+</html>
+
